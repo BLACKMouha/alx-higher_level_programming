@@ -9,6 +9,5 @@ followed by a new line
 - You are not allowed to store characters in a variable
 - You are not allowed to import any module
 """
-
-for ascii_code in range(ord('a'), (ord('z')+1)):
+for ascii_code in range(ord('a'), ord('z') + 1):
     print("{:c}".format(ascii_code), end='')
