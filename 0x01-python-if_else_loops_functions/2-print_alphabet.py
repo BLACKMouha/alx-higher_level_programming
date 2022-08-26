@@ -10,5 +10,5 @@ followed by a new line
 - You are not allowed to import any module
 """
 
-for ascii_code in range(97, 123):
-    print("{:s}".format(chr(ascii_code)), end='')
+for ascii_code in range(ord('a'), (ord('z')+1)):
+    print("{:c}".format(ascii_code), end='')
