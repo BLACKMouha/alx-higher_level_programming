@@ -4,4 +4,4 @@ for n in range(100):
     if n == 99:
         print("{}".format(n))
         break
-    print("{:0>2}, ".format(n), end="")
+    print("{integer:0>2}, ".format(integer=n), end='')
