@@ -2,11 +2,15 @@
 
 if __name__ == "__main__":
     from sys import argv
+    len_argv = len(argv) - 1
 
-    if len(argv) == 2:
-        print('{} argument:'.format(len(argv) - 1))
-    if len(argv) > 2:
-        print('{} arguments:'.format(len(argv) - 1))
+    if len_argv == 0:
+        print('{} argument:'.format(len_argv))
+    if len_argv == 1:
+        print('{} argument:'.format(len_argv))
+    else:
+        print('{} arguments:'.format(len_argv))
 
-    for i in range(1, len(argv)):
-        print('{}: {}'.format(i, argv[i]))
+    if len_argv > 0:
+        for i in range(1, len(argv)):
+            print('{}: {}'.format(i, argv[i]))
