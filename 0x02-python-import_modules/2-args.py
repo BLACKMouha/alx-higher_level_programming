@@ -11,8 +11,8 @@ if __name__ == "__main__":
         print("{} arguments:".format(len_argv))
 
     if len_argv >= 1:
-        i = 0
+        len_argv = 0
         for arg in sys.argv:
             if len_argv != 0:
-                print("{}: {}".format(i, arg))
-            i += 1
+                print("{}: {}".format(len_argv, arg))
+            len_argv += 1
