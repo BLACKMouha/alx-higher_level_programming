@@ -25,4 +25,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
             s = tuple_a[i] + tuple_b[i]
             sum_tuple += s,
 
+    if tuple_a == () and tuple_b == ():
+        return sum_tuple = 0,
     return sum_tuple
