@@ -24,4 +24,11 @@ def add_tuple(tuple_a=(), tuple_b=()):
         for i in range(len(tuple_b)):
             s = tuple_a[i] + tuple_b[i]
             sum_tuple += s,
+
+    if not tuple_a and not tuple_b:
+        sum_tuple = 0, 0,
+    if tuple_a == () and not tuple_b:
+        sum_tuple = tuple_a
+    if not tuple_a == () and tuple_b:
+        sum_tuple = tuple_b
     return sum_tuple
