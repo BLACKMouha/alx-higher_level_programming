@@ -18,7 +18,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
             sum_tuple += s,
             idx += 1
         for j in range(idx, len(tuple_b)):
-            sum_tuple += tuple_a[j],
+            sum_tuple += tuple_b[j],
 
     if len(tuple_a) == len(tuple_b):
         for i in range(len(tuple_b)):
