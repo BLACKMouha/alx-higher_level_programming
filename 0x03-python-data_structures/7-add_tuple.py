@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    sum_tuple = ()
 
     if len(tuple_a) == 2:
         t_a_1 = tuple_a[0]
