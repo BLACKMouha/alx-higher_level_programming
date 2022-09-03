@@ -64,6 +64,9 @@ int is_palindrome(listint_t **head)
 	listint_t *reversed, *temp, *temp_rev;
 	size_t is_pal = 0;
 
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+
 	temp = *head;
 	reversed = NULL;
 	while (temp)
