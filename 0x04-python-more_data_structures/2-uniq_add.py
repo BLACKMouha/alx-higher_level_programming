@@ -6,8 +6,6 @@ def uniq_add(my_list=[]):
     for i in my_list:
         my_set.add(i)
 
-    del i
-
     for i in my_set:
         r += i
     del my_set
