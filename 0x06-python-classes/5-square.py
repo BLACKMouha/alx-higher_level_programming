@@ -51,6 +51,8 @@ class Square:
     def my_print(self):
         """Prints '#' characters to draw a square of the given size
             If the size is 0, a new line is printed"""
+        if self.__size == 0:
+            print()
         for i in range(self.__size):
             for j in range(self.__size):
                 print('#', end="")
