@@ -90,8 +90,6 @@ class Square:
             print()
             return
         else:
-            if self.position[1] == 0:
-                pass
             for i in range(self.__position[1]):
                 print()
             for i in range(self.__size):
