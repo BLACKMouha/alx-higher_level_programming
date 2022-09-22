@@ -16,38 +16,26 @@ class Square:
                 TypeError:
                     if size is not type int.
                     if position is not type tuple
-                ValueError: if size < 0.
-        """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
-
-        if (not isinstance(position, tuple)
-                or (not isinstance(position[0], int)
-                and not isinstance(position[1], int))
-                or len(position) != 2):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = position
+                ValueError: if size < 0."""
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        """size(self)
-            Return the size of a square size is a property of the private
+        """Return the size of a square size is a property of the private
             attribute size"""
         return self.__size
 
     @size.setter
-    def size(self, test):
+    def size(self, value):
         """size(self)
             A function that sets and returns the size
             attribute"""
-        if not isinstance(test, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if test < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = test
+        self.__size = value
 
     @property
     def position(self):
@@ -65,12 +53,12 @@ class Square:
 
             Return:
                 size of the square"""
-        if (not isinstance(position, tuple)
-                or (not isinstance(position[0], int)
-                and not isinstance(position[1], int))
-                or len(position) != 2):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.position = value
+        self.__position = value
 
     def area(self):
         """Computes the area of a square thanks to its size
