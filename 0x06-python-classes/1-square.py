@@ -11,9 +11,5 @@ class Square:
 
             Args:
                 size (int): size of the square.
-
-            Raises:
-                TypeError: size if not type int.
-                ValueError: if size < 0.
         """
         self.__size = size
