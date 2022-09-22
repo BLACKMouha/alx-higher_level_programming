@@ -6,5 +6,14 @@ class Square:
     """Define a class Square."""
 
     def __init__(self, size):
-        """Instantiates a square object with a given size."""
+        """Called automaticcaly and immediately when instantiating a square
+            object with a given size
+
+            Args:
+                size (int): size of the square.
+
+            Raises:
+                TypeError: size if not type int.
+                ValueError: if size < 0.
+        """
         self.__size = size
