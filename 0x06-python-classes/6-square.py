@@ -1,13 +1,22 @@
 #!/usr/bin/python3
+"""Square class for representation of a real word square"""
+
+
 class Square:
-    """Definionn of a class Square."""
+    """Define the class Square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """__init__(self, size)
-            Instantiates a square object with a given size.
-            The size must be a integer greater than 0. Otherwise TypeError if
-            size is not an integer or ValueError is raised if size if less than
-            0.
+        """Called automaticcaly and immediately when instantiating a square
+            object with a given size
+
+            Args:
+                size (int): size of the square.
+
+            Raises:
+                TypeError:
+                    if size is not type int.
+                    if position is not type tuple
+                ValueError: if size < 0.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -42,10 +51,20 @@ class Square:
 
     @property
     def position(self):
+        """Getting the size of the current instance"""
         return self.__position
 
     @position.setter
     def position(self, value):
+        """Setting the size of the current instance
+            Agrs:
+                test (int): integer argument
+
+            Raises:
+                TypeError: if test is not type int.
+
+            Return:
+                size of the square"""
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
@@ -55,17 +74,32 @@ class Square:
         self.position = value
 
     def area(self):
-        """area(self)
-            Return an integer representing the area for a
-            given square' size"""
+        """Computes the area of a square thanks to its size
+
+            Return:
+                int: an integer representing the area for a given square's
+                size"""
         return self.size ** 2
 
     def my_print(self):
-        for i in range(self.__size):
-            for j in range(self.__position[0]):
-                print(' ', end='')
-            for k in range(self.__position[1]):
-                pass
-            for m in range(self.__size):
-                print('#', end='')
+        """Prints spaces (position[1] times) then '#' (size times) characters
+            to draw a square of the given size.
+            If the size is 0, a new line is printed
+            If position[1] is 0, no space is printed"""
+        if self.__size == 0:
             print()
+        else:
+            if self.__position == 0:
+                for i in range(self.__size):
+                    for j in range(self.__size):
+                        print('#', end="")
+                    print()
+            else:
+                for i in range(self.__size):
+                    for j in range(self.__position[0]):
+                        print(' ', end='')
+                    for k in range(self.__position[1]):
+                        pass
+                    for m in range(self.__size):
+                        print('#', end='')
+                    print()
