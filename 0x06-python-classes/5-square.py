@@ -23,9 +23,11 @@ class Square:
         self.__size = size
 
     def area(self):
-        """area(self)
-            Return an integer representing the area for a
-            given square' size"""
+        """Computes the area of a square thanks to its size
+
+            Return:
+                int: an integer representing the area for a given square's
+                size"""
         return self.size ** 2
 
     @property
