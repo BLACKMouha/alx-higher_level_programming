@@ -21,10 +21,7 @@ class Square:
         self.position = position
 
     def __str__(self):
-        """Prints spaces (position[1] times) then '#' (size times) characters
-            to draw a square of the given size.
-            If the size is 0, a new line is printed
-            If position[1] is 0, no space is printed"""
+        """Return a the representation of a square"""
         s = str()
         if self.__size == 0:
             return s
