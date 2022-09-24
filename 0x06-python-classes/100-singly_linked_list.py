@@ -3,6 +3,8 @@
 
 
 class Node:
+    """Define the Node"""
+
     def __init__(self, data, next_node=None):
         """Initializes self
             Args:
@@ -52,6 +54,8 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Define a Singly List List."""
+
     def __init__(self):
         """Initializes a singly linked list"""
         self.__head = None
