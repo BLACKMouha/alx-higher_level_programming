@@ -18,9 +18,9 @@ Let's test this function
     >>> say_my_name('FirstName')
     My name is FirstName 
     >>> say_my_name('')
-    My name is   
+    My name is  
     >>> say_my_name('', '')
-    My name   
+    My name is  
     >>> say_my_name(None, 'LastName') # doctest: +ELLIPSIS
     Traceback (most recent call last):
     ...
