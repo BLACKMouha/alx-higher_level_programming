@@ -15,6 +15,10 @@ Let's test this function
     My name is FirstName LastName
     >>>
     >>> # Testing the first parameter
+    >>> say_my_name('FirstName')
+    My name is FirstName 
+    >>> say_my_name('')
+    My name is  
     >>> say_my_name(None, 'LastName') # doctest: +ELLIPSIS
     Traceback (most recent call last):
     ...
