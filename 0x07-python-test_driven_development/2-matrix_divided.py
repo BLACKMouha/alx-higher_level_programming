@@ -23,6 +23,11 @@ def matrix_divided(matrix, div):
             a new matrix resulting to the division by div for each element of a
             sublist of matrix"""
 
+    if type(div) != int and type(div) != float:
+        raise TypeError('div must be a number')
+    if div == 0:
+        raise ZeroDivisionError('division by zero')
+
     if not isinstance(matrix, list):
         raise TypeError('matrix must be a matrix (list of lists) of integers/\
 floats')
@@ -58,11 +63,5 @@ lists) of integers/floats')
             break
     # endfor
 
-    if type(div) != int and type(div) != float:
-        raise TypeError('div must be a number')
-    if div == 0:
-        raise ZeroDivisionError('division by zero')
-    if div == float('inf') or div == -float('inf') or div != div:
-        div = 10
     return list(map(lambda arr: list(map(lambda x: round((x / div), 2), arr)),
                 matrix))
