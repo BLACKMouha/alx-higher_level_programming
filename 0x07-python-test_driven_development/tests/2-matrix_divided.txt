@@ -1,4 +1,4 @@
-Test File for the 2-matrix_divided module
+Test File for the ``2-matrix_divided`` module
 =========================================
 
 The 2-matrix_divided module contains one function called matrix_divided.
@@ -45,3 +45,11 @@ item by a given 'div'.
     Traceback (most recent call last):
     ...
     TypeError: ... matrix (list of lists) of integers/floats
+    >>>
+    >>> # Testing for overflow divisor: Infinity and - Infinity
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
+    [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]
+    >>>
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], -float('inf'))
+    [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]
+    >>>
