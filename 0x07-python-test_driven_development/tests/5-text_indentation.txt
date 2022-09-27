@@ -26,35 +26,34 @@ Let's test this function:
     ... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
     ... beatiorem! Iam ruinas videres""")
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    <BLANKLINE>
+    <BREAKLINE>
     Quonam modo?
-    <BLANKLINE>
+    <BREAKLINE>
     Utrum igitur tibi litteram videor an totas paginas commovere?
-    <BLANKLINE>
+    <BREAKLINE>
     Non autem hoc:
-    <BLANKLINE>
+    <BREAKLINE>
     igitur ne illud quidem.
-    <BLANKLINE>
+    <BREAKLINE>
     Fortasse id optimum, sed ubi illud:
-    <BLANKLINE>
+    <BREAKLINE>
     Plus semper voluptatis?
-    <BLANKLINE>
+    <BREAKLINE>
     Teneo, inquit, finem illi videri nihil dolere.
-    <BLANKLINE>
+    <BREAKLINE>
     Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
-    <BLANKLINE>
+    <BREAKLINE>
     Si id dicis, vicimus.
-    <BLANKLINE>
+    <BREAKLINE>
     Inde sermone vario sex illa a Dipylo stadia confecimus.
-    <BLANKLINE>
+    <BREAKLINE>
     Sin aliud quid voles, postea.
-    <BLANKLINE>
+    <BREAKLINE>
     Quae animi affectio suum cuique tribuens atque hanc, quam dico.
-    <BLANKLINE>
-    Utinam quidem dicerent alium alio beatiorem! Iam ruinas videre
-    >>>
+    <BREAKLINE>
+    Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres>>>
     >>> # Testing type
-    >>> text_indentation(None) # doctest: +ELLIPSIS
+    >>> text_indentation(None) # doctest: +ELLIPSIS +REPORT_CDIFF
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
