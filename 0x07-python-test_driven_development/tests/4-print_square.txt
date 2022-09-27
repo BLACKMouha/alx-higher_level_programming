@@ -1,0 +1,68 @@
+Test file for ``4-print_square`` module
+========================================
+
+``4-print_square`` contains a function called print_square that print a square
+with the character '#'.
+Its prototype: def print_square(size):
+    Where size is the size length of the square to print
+
+So let's test this function
+
+    >>> print_square = __import__("4-print_square").print_square
+    >>>
+    >>> # Testing a positive integer
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+    >>>
+    >>> # Testing size = 0
+    >>> print_square(0)
+    >>>
+    >>> # Testing a negative value
+    >>> print_square(-1) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+    >>>
+    >>> # Testing the type of size
+    >>> print_square(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>>
+    >>> print_square(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>>
+    >>> print_square('test')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> print_square([1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>>
+    >>> # Testing negative float
+    >>> print_square(-1.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>>
+    >>> # Testing Infinity and -Infinity
+    >>> print_square(float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> print_square(-float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> print_square(float('nan'))
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>>
