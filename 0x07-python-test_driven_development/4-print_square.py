@@ -2,6 +2,7 @@
 
 """4-print_square.py"""
 
+
 def print_square(size):
     """Task: write a function that prints a square with the character '#'
         Prototype: def print_square(size):
