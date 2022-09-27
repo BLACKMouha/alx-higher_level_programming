@@ -62,6 +62,7 @@ lists) of integers/floats')
         if i == 0:  # if i = 0 so i - 1 = -1, OutOfRange raises
             break
     # endfor
-
-    return list(map(lambda arr: list(map(lambda x: round((x / div), 2), arr)),
-                matrix))
+    if div == float('inf') or div == -float("inf"):
+        return list(map(lambda arr: list(map(lambda x: 0.0, arr)), matrix))
+    return list(map(lambda arr: list(map(lambda x: round((x / div), 2),
+                arr)), matrix))
