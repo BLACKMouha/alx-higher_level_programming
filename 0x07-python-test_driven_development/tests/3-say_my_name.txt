@@ -1,0 +1,61 @@
+Test File for the ``3-say_my_name`` module
+=============================================
+
+```3-say_my_name``` is a module containing one function called say_my_name.
+Its prototype is : def say_my_name(first_name, last_name=""):
+This function print the following output with the following format:
+    My name is <first_name> <last_name>
+
+Let's test this function
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>>
+    >>> # Testing two valid string
+    >>> say_my_name('FirstName', 'LastName')
+    My name is FirstName LastName
+    >>>
+    >>> # Testing the first parameter
+    >>> say_my_name(None, 'LastName') # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>>
+    >>> say_my_name(True, 'LastName') # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>> say_my_name(float('inf'), 'LastName') # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>> say_my_name(1, 'LastName') # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>> say_my_name([1, 2], 'LastName') # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>>
+    >>> # Testing the last parameter
+    >>> say_my_name('FirstName', None) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+    >>>
+    >>> say_my_name('FirstName', True) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+    >>> say_my_name('FirstName', float('inf')) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+    >>> say_my_name('FirstName', 1) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+    >>> say_my_name('FirstName', [1, 2]) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
