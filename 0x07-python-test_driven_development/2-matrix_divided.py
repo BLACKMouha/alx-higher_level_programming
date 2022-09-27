@@ -41,8 +41,9 @@ integers/floats')
         # endfor
         if isinstance(matrix[i], list) and isinstance(matrix[i-1], list):
             if len(matrix[i]) != len(matrix[i-1]):
-                raise TypeError('Each row of the matrix must have the same\
- size')
+                raise TypeError('Each row of the matrix must have the same \
+size')
+                break
             else:
                 for i, j in zip(matrix[i], matrix[i-1]):
                     if (not isinstance(i, float) and not isinstance(i, int))\
@@ -50,6 +51,7 @@ integers/floats')
                                 not isinstance(j, int)):
                         raise TypeError('matrix must be a matrix (list of \
 lists) of integers/floats')
+                        break
                 # endfor
 
         if i == 0:  # if i = 0 so i - 1 = -1, OutOfRange raises

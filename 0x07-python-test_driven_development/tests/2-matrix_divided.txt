@@ -17,7 +17,15 @@ item by a given 'div'.
     >>> matrix
     [[1, 2, 3], [4, 5, 6]]
     >>>
+    >>> # Testing sublists with different length
+    >>> matrix = [[3, 9], [12, 15, 3]]
+    >>> matrix_divided(matrix, 2) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+    >>>
     >>> # Testing division of a valid matrix by 0
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
     >>> matrix_divided(matrix, 0) # doctest: +ELLIPSIS
     Traceback (most recent call last):
     ...
