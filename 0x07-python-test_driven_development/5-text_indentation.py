@@ -22,8 +22,7 @@ def text_indentation(text):
     i = len(r_text) - 1
     while i - 1 >= 0:
         if r_text[i] == ' ':
-            if 65 <= ord(r_text[i-1]) <= 90 or 97 <= ord(r_text[i-1]) <= 122\
-                    or r_text[i-1] == ' ':
+            if r_text[i-1] == ' ':
                 pass
 
         if r_text[i] in ['.', '?', ':']:
