@@ -34,5 +34,5 @@ def text_indentation(text):
             print(r_text[i], end='')
         i -= 1
 
-    if r_text[i] != ' ':
-        print(r_text[i], end='')
+    if r_text[i-1] != ' ':
+        print(r_text[i])
