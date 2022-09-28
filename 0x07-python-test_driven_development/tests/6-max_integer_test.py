@@ -13,8 +13,23 @@ class TestMaxInteger(unittest.TestCase):
         integers = [1, 2, 3, 4]
         self.assertEqual(max_integer(integers), 4)
 
-        integers1 = [1, 4, 3, 2]
-        self.assertEqual(max_integer(integers1), 4)
+        integers = [1, 4, 3, 2]
+        self.assertEqual(max_integer(integers), 4)
+
+        integers = [-1, -2, False, -4]
+        self.assertEqual(max_integer(integers), False)
+
+        integers = [-1, -2, True, -4]
+        self.assertEqual(max_integer(integers), True)
+
+        integers = [-1, -2, float('inf'), -4]
+        self.assertEqual(max_integer(integers), float('inf'))
+
+        integers = [-1, -2, -float('inf'), -4]
+        self.assertEqual(max_integer(integers), -1)
+
+        integers = [-1, -2, float('nan'), -4]
+        self.assertEqual(max_integer(integers), -1)
 
     def test_exceptions(self):
         # checks for mismatching number of argument
@@ -26,22 +41,11 @@ class TestMaxInteger(unittest.TestCase):
 
         # checks for mismatching type
         with self.assertRaises(TypeError):
-            integers = [-1, -2, False, -4]
-            max_integer(integers)
-        with self.assertRaises(TypeError):
-            integers = [-1, -2, True, -4]
-            max_integer(integers)
-
-        with self.assertRaises(TypeError):
             integers = [1, 2, None, 4]
             max_integer(integers)
 
         with self.assertRaises(TypeError):
             integers = [1, '2', 3, 4]
-            max_integer(integers)
-
-        with self.assertRaises(TypeError):
-            integers = [1, 2, 3.14, 4]
             max_integer(integers)
 
         with self.assertRaises(TypeError):
