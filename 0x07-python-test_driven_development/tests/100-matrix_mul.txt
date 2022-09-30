@@ -1,0 +1,135 @@
+Test file for ``100-matrix_mul`` module
+=======================================
+
+``100-matrix_mul`` contains a function called 100-matrix_mul that mutliplies
+two matrix
+Its prototype: def matrix_mul(m_a, m_b):
+
+Let's test this function
+------------------------
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+    >>>
+    >>> # Testing type of m_a
+    >>> m_a = True
+    >>> m_b = [[1, 2]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_a must be a list
+    >>>
+    >>> m_a = 'string'
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_a must be a list
+    >>>
+    >>> m_a = None
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_a must be a list
+    >>>
+    >>> m_a = [1, '2', True]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_a must be a list of lists
+    >>>
+    >>> # Testing m_a as an empty list
+    >>> m_a = []
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+    >>>
+    >>> m_a = [[]]
+    >>> matrix_mul(m_a, m_b)
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+    >>>
+    >>> # Testing type of m_b
+    >>> m_b = True
+    >>> m_a = [[1, 2]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_b must be a list
+    >>>
+    >>> m_b = 'string'
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_a must be a list
+    >>>
+    >>> m_b = None
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_b must be a list
+    >>>
+    >>> m_b = [1, '2', True]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: TypeError: m_b must be a list of lists
+    >>>
+    >>> # Testing m_b as an empty list
+    >>> m_b = []
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+    >>>
+    >>> m_a = [[]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+    >>>
+    >>> # Testing the infeasibility of their multiplication
+    >>> m_a = [[1, 2]]
+    >>> m_b = [[3, 4], [5, 6], [7, 8]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a and m_b can't be multiplied
+    >>>
+    >>> # Testing type of items
+    >>> m_a = [[1, '4'], [3, 5]]
+    >>> m_b = [[1, 2]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    >>> Traceback (most recent call last):
+    ...
+    TypeError: m_a should contain only integers or floats
+    >>>
+    >>> m_b = [[1, '4'], [3, 5]]
+    >>> m_a = [[1, 2]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    >>> Traceback (most recent call last):
+    ...
+    TypeError: m_b should contain only integers or floats
+    >>>
+    >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [[1, 2], [3, 4]]
+    >>> matrix_mul(m_a, m_b)
+    [[7, 10], [15, 22]]
+    >>>
+    >>> m_a = [[1, 2]]
+    >>> m_b = [[3, 4], [5, 6]]
+    [[13, 16]]
+    >>>
+
+
+
+
+
+
+
+
+
+
+
+
+
