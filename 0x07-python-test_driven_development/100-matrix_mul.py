@@ -1,7 +1,31 @@
 #!/usr/bin/python3
+"""100-matrix_mul module"""
 
 def matrix_mul(m_a, m_b):
+    """matrix_mul computes the multiplication of two matrix. A matrix in Python
+        is a list of lists. In this case, it's a list of lists of integers
 
+        Prototype: def matrix_mul(m_a, m_b):
+
+        Args:
+            m_a: matrix
+            m_b: matrix
+        Raises
+            TypeError:
+
+                if are not list
+                if lists of lists
+                if list of lists of integers or floats
+                if the size of a rows are of a matrix are different
+
+            ValueError:
+                if arguments are empty
+                if the number of columns in the first matrix is different to
+                    the number of rows in the second matrix
+
+        Return:
+            a new matrix with the same number of rows of the first matrix and
+                the same number of colums of the second matrix"""
     if type(m_a) != list:
         raise TypeError('m_a must be a list')
 
