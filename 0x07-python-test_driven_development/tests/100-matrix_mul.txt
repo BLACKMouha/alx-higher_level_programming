@@ -121,3 +121,30 @@ Let's test this function
     >>> matrix_mul(ma, mb)
     [[13, 16]]
     >>>
+    >>> # Testing no arguments
+    >>> matrix_mul() # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing ... 'm_a' and 'm_b'
+    >>>
+    >>> # Testing one argument missed
+    >>> matrix_mul() # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing ... 'm_a' and 'm_b'
+    >>>
+    >>> # Testing ma = List of lists of number / mb = List of lists of number various size
+    >>> m_a = [[1, 2], [3, 4]]
+    >>> m_b = [[1, 2], [3, 4, 5]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_b must be of the same size
+    >>>
+    >>> # Testing ma = List of lists of number various size / mb = List of lists of number
+    >>> m_b = [[1, 2], [3, 4]]
+    >>> m_a = [[1, 2], [3, 4, 5]]
+    >>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must be of the same size

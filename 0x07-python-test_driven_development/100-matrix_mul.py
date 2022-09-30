@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """100-matrix_mul module"""
 
+
 def matrix_mul(m_a, m_b):
     """matrix_mul computes the multiplication of two matrix. A matrix in Python
         is a list of lists. In this case, it's a list of lists of integers
