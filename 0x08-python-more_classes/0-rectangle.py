@@ -3,6 +3,6 @@
 """0-rectangle.py"""
 
 
-def Rectangle():
+class Rectangle():
     """Definition of a class Rectangle"""
     pass
