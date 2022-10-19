@@ -100,4 +100,5 @@ class Rectangle():
         return s[:-1]
 
     def __repr__(self):
+        """Representation of the code that reproduces the instance"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
