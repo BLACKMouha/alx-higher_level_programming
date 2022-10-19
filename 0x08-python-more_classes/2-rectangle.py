@@ -80,4 +80,6 @@ class Rectangle():
             Usage: instance_name.perimeter()
 
             Return: an integer, the parameter of a rectangle"""
+        if self.width == 0 or self.height == 0:
+            return 0
         return (self.width + self.height) * 2
