@@ -5,7 +5,7 @@
 
 class Rectangle():
     """Definition of a class Rectangle"""
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """Initializing a Rectangle instance(object)
             Args:
                 width: the width of the rectangle
@@ -62,7 +62,7 @@ class Rectangle():
 
             Return: Nothing special"""
         if type(value) != int:
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError('height must be >= 0')
 
