@@ -1,0 +1,40 @@
+Test File for the ``1-my_list`` module
+======================================
+
+The 1-mylist module contains a class named MyList that is a subclass of list.
+The class has a class method name print_sorted that prints a sorted list.
+Its prototype is : def print_sorted(self):
+This function takes the current instance (that is a list) and prints it in a
+sorted way.
+--------------------------------------------------------------------------------
+
+    >>> # import the module first.
+    >>> MyList = __import__('1-my_list').MyList
+    >>>
+    >>> # Testing instanciation of the class MyList
+    >>> my_list = MyList()
+    >>>
+    >>> # Testing is my_list is an instance of object
+    >>> print(isinstance(my_list, object))
+    True
+    >>>
+    >>> # Testing is my_list is an instance of list object
+    >>> print(isinstance(my_list, list))
+    True
+    >>>
+    >>> # Testing is my_list is an instance of MyList class
+    >>> print(type(my_list).__name__)
+    MyList
+    >>>
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>>
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
