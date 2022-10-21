@@ -49,3 +49,7 @@ sorted way.
     >>>
     >>> print(my_list)
     [1, 4, 2, 3, 5]
+    >>>
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
