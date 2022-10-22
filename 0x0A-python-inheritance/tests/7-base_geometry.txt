@@ -17,6 +17,12 @@ It takes two user parameters: `name` and `value`
     True
     >>>
     >>> # Testing for missing parameter for area function
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+    >>>
+    >>> # Testing for passing an argument to area()
     >>> bg.area(1)
     Traceback (most recent call last):
     ...
