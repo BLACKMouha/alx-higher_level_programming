@@ -15,12 +15,20 @@ It takes two user parameters: `name` and `value`
     >>> # Testing bg as a convenient instance of BaseGeometry class
     >>> dir(bg) == dir(BaseGeometry)
     True
-    >>> # Testing missing parameters
+    >>>
+    >>> # Testing for missing parameter for area function
+    >>> bg.area(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: area() takes 1 positional argument but 2 were given
+    >>>
+    >>> # Testing missing parameters for integer_validator function
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-    >>> # Testing missing value parameter
+    >>>
+    >>> # Testing missing value parameter for integer_validator function
     >>> bg.integer_validator("name")
     Traceback (most recent call last):
     ...
