@@ -1,0 +1,36 @@
+Test file for the ``7-base_geometry`` module
+============================================
+
+The 7-base_geometry contains a class name BaseGeometry. It holds a method named
+integer_validator that checks if one of its parameter named `value` is valid
+Prototype: def integer_validator(self, name, value):
+It takes two user parameters: `name` and `value`
+
+--------------------------------------------------------------------------------
+
+    >>> # import the module first.
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+    >>>
+    >>> # Testing positive value
+    >>> bg.integer_validator("my_int", 12)
+    >>> bg.integer_validator("width", 89)
+    >>>
+    >>> # Testing zero value
+    >>> bg.integer_validator("width", 0) # doctest +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: width must be greater than 0
+    >>>
+    >>> # Testing negative value
+    >>> bg.integer_validator("width", -89) # doctest +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    ValueError: width must be greater than 0
+    >>>
+    >>> # Testing type of value
+    >>> bg.integer_validator("name", "John") # doctest +ELLIPSIS
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+    >>>
