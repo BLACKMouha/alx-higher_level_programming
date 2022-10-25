@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""9-student module"""
+"""10-student module"""
 
 
 class Student:
