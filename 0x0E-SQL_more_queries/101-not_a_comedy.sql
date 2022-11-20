@@ -1,3 +1,5 @@
+-- 101-not_a_comedy.sql
+-- SQL query that lists all shows without the genre Comedy
 SELECT tv_shows.title FROM tv_shows
 WHERE tv_shows.title NOT IN
 	(SELECT tv_shows.title
