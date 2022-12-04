@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-
 """1-filter_states.py"""
+
 
 if __name__ == '__main__':
     """import modules"""
     import MySQLdb
     from sys import argv
-
 
     if len(argv) == 4:
         """Retrieve passed arguments"""
