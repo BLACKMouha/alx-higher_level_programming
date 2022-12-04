@@ -21,3 +21,6 @@ rows = cur.fetchall()
 
 for row in rows:
     print("{}".format(row))
+
+cur.close()
+conn.close()
