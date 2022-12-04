@@ -28,7 +28,7 @@ if __name__ == '__main__':
         """SQL query that list all states beginning with 'N'"""
         cur.execute("SELECT * FROM states WHERE name='{}'".format(search))
 
-        rows = cur.fetchone()
+        rows = cur.fetchall()
         """Printing rows"""
         for row in rows:
             print(row)
