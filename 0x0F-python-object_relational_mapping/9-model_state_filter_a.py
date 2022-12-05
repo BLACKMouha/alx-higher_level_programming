@@ -3,7 +3,8 @@
 """9-model_state_filter_a.py"""
 
 from sys import argv
-from sqlalchemy import create_engine, select
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == '__main__':
@@ -13,8 +14,8 @@ if __name__ == '__main__':
                            )
 
     Base.metadata.create_all(engine)
-    q = select(State.__table__).where(State.__table__.c.name.like('%a%'))
-    states_containing_a = engine.execute(q)
+    Session = sessionmaker(bind=engine)
 
-    for state in states_containing_a:
+    session = Session()
+    for state in session.query(State).filter(State.name.contains('a')):
         print("{}: {}".format(state.id, state.name))
