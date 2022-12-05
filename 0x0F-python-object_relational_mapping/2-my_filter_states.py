@@ -26,7 +26,9 @@ if __name__ == '__main__':
         """Create the cursor instance"""
         cur = conn.cursor()
         """SQL query that list all states beginning with 'N'"""
-        cur.execute("SELECT * FROM states WHERE name='{}'".format(search))
+        query = "SELECT * FROM states WHERE BINARY name='{}'".format(search)
+
+        cur.execute(query)
 
         rows = cur.fetchall()
         """Printing rows"""
