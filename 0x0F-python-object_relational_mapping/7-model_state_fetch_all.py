@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""7-model_state_fetch_all.py"""
 
 from sys import argv
 from sqlalchemy import (create_engine)
