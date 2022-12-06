@@ -18,10 +18,9 @@ if __name__ == '__main__':
 
     session = Session()
 
-    st_list = session.query(State).all()
-    for st in st_list:
+    states_list = session.query(State).all()
+    for st in states_list:
         print("{}: {}".format(st.id, st.name))
-        ct_by_id = session.query(City).filter_by(state_id=st.id).all()
-        for ct in ct_by_id:
+        for ct in st.cities:
             print("    {}: {}".format(ct.id, ct.name))
     session.close()
