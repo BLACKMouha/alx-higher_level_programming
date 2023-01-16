@@ -1,3 +1,3 @@
 #!/bin/bash
 # Display the status of a HTTP response
-curl -sI "$1" |grep HTTP | cut -d' ' -f2
+curl -s -o /dev/null -w "%{http_code}" "$1"
