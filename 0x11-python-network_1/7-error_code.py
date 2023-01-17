@@ -14,6 +14,6 @@ if __name__ == '__main__':
     url = argv[1]
     res = requests.post(url)
     if (int(res.status_code) >= 400):
-        print('Error: {}'.format(res.status_code))
+        print('Error code: {}'.format(res.status_code))
     else:
         print(res.text)
