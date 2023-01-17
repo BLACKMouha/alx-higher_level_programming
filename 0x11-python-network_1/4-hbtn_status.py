@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """4-hbtn_status module
     This script fetches an URL and displays info about response
+    The module used is : `requests`
 """
 
 if __name__ == '__main__':
