@@ -13,8 +13,9 @@ if __name__ == '__main__':
     res = get(url, headers={"Accept": "application/vnd.github+json"})
     commits = res.json()
 
-    while commits[i]:
-        if i == 10:
-            break
-        print('{}: {}'.format(
-            commits[i]['sha'], commits[i]['commit']['author']['name']))
+    try:
+        for i in range(10):
+            print('{}: {}'.format(commits[i]['sha'],
+                                  commits[i]['commit']['author']['name']))
+    except Exception:
+        pass
