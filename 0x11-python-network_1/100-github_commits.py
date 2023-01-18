@@ -10,7 +10,7 @@ if __name__ == '__main__':
     owner = argv[1]
     repo = argv[2]
     url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
-    res = get(url, headers={"Accept": "application/vnd.github+json"})
+    res = get(url)
     commits = res.json()
 
     try:
