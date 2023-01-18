@@ -14,7 +14,7 @@ if __name__ == '__main__':
     commits = res.json()
 
     while commits[i]:
-        print('{}: {}'.format(
-            commits[i]['sha'], commits[i]['commit']['author']['name']))
         if i == 10:
             break
+        print('{}: {}'.format(
+            commits[i]['sha'], commits[i]['commit']['author']['name']))
