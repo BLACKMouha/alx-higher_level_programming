@@ -12,6 +12,9 @@ if __name__ == '__main__':
     url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
     res = get(url, headers={"Accept": "application/vnd.github+json"})
     commits = res.json()
-    for i in range(10):
+
+    while commits[i]:
         print('{}: {}'.format(
             commits[i]['sha'], commits[i]['commit']['author']['name']))
+        if i == 10:
+            break
