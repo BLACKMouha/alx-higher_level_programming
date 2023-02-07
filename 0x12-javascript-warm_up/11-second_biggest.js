@@ -5,8 +5,11 @@ if (process.argv.length < 4) {
   const arr = [];
   process.argv.forEach((val, index) => {
     if (index >= 2) {
-      arr.push(val);
+      arr.push(Number(val));
     }
   });
-  console.log(arr.reverse(arr.sort())[1]);
+  arr.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(arr.reverse()[1]);
 }
