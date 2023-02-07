@@ -5,8 +5,7 @@ function factorial (a) {
 
   if (isNaN(n) || n === 0 || n === 1) {
     console.log(r);
-  }
-  else {
+  } else {
     for (let i = 2; i <= n; i++) {
       r *= i;
     }
