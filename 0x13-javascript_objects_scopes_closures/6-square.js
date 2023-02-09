@@ -5,7 +5,7 @@ module.exports = class Square extends OtherSquare {
   constructor (size) {
     super(size, size);
   }
- 
+
   charPrint (c) {
     if (c !== undefined) {
       for (let i = 0; i < this.height; i++) {
