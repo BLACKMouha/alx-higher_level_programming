@@ -11,7 +11,7 @@ module.exports = class Rectangle {
     for (let i = 0; i < this.height; i++) {
       const x = [];
       for (let j = 0; j < this.width; j++) {
-        x.push('x');
+        x.push('X');
       }
       console.log(x.join(''));
     }
