@@ -14,7 +14,7 @@ if (process.argv.length === 3) {
     for (const result of results) {
       const characters = result.characters;
       for (const character of characters) {
-        if (character === 'https://swapi-api.alx-tools.com/api/people/18/') c += 1;
+        if (character.substr((character.length - 3), 2) === '18') c += 1;
       }
     }
     console.log(c);
