@@ -17,7 +17,7 @@ if (process.argv.length === 3) {
           if (j.completed === true) count += 1;
         }
       }
-      completedTasksPerUser[i.userId] = count;
+      if (count !== 0) completedTasksPerUser[i.userId] = count;
     }
     console.log(completedTasksPerUser);
   });
