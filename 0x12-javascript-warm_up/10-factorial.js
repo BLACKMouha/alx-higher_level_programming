@@ -1,16 +1,10 @@
 #!/usr/bin/node
-function factorial (a) {
-  const n = Number(a);
-  let r = 1;
-
-  if (isNaN(n) || n === 0 || n === 1) {
-    console.log(r);
+function factorial (n) {
+  if (isNaN(n) || n === 1) {
+    return (1);
   } else {
-    for (let i = 2; i <= n; i++) {
-      r *= i;
-    }
-    console.log(r);
+    return (n * factorial(n - 1));
   }
 }
-
-factorial(process.argv[2]);
+const i = Math.floor(Number(process.argv[2]));
+console.log(factorial(i));
