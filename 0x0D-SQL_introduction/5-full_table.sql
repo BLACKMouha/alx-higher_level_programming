@@ -1,3 +1,3 @@
--- Full Description of a table
--- SQL query that shows the description of a table
+-- Full Description of a table creation
+-- SQL query that shows full description of a table creation
 SHOW CREATE TABLE first_table;

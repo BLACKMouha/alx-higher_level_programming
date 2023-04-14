@@ -1,16 +1,15 @@
--- 100-not_my_genres.sq
--- SQL query that lists all genres not linked to the show Dexter
-
+-- SQL script that uses hbtn_0d_tvshows database to list all genres not linked
+-- to the show 'Dexter'
+-- Results must be sorted in ascending order by the genre name
 SELECT DISTINCT tv_genres.name
-	FROM tv_genres
-	INNER JOIN tv_show_genres
-	ON tv_genres.id = tv_show_genres.genre_id
-	WHERE tv_genres.name NOT IN
-	( SELECT tv_genres.name
-		FROM tv_genres
-		INNER JOIN tv_show_genres
-		ON tv_genres.id = tv_show_genres.genre_id
-		INNER JOIN tv_shows
-		ON tv_shows.id = tv_show_genres.show_id
-		WHERE tv_shows.title = 'Dexter' )
-	ORDER BY tv_genres.name ASC;
+FROM tv_genres
+INNER JOIN tv_show_genres
+ON tv_show_genres.genre_id = tv_genres.id
+WHERE tv_genres.name NOT IN
+(SELECT tv_genres.name FROM tv_genres
+  INNER JOIN tv_show_genres
+  ON tv_genres.id = tv_show_genres.genre_id
+  INNER JOIN tv_shows
+  ON tv_shows.id = tv_show_genres.show_id
+  WHERE tv_shows.title = 'Dexter')
+ORDER BY tv_genres.name ASC;

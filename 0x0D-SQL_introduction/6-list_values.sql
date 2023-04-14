@@ -1,3 +1,3 @@
--- List all in table
--- SQL query that shows all rows of a table
+-- Listing all rows in a table
+-- SQL query that lists all rows of a table
 SELECT * FROM first_table;

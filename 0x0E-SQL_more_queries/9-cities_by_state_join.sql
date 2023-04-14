@@ -1,6 +1,4 @@
--- 9-cities_by_state_join.sql
--- SQL query that lists all cities contained in the database hbtn_0d_usa
-SELECT cities.id, cities.name, states.name
-	FROM cities
-	LEFT JOIN states
-	ON states.id = cities.state_id ;
+-- SQL script that lists all cities
+-- each record should display cities.id, cities.name, states.name
+SELECT cities.id, cities.name, states.name FROM cities
+  LEFT JOIN states ON states.id = cities.state_id;
