@@ -11,7 +11,7 @@ if (__name__ == '__main__'):
         db = MySQLdb.connect(host=h, user=u, passwd=p, db=d, port=3306)
         cur = db.cursor()
 
-        q = "SELECT * FROM states WHERE name LIKE 'N%'"
+        q = 'SELECT * FROM states WHERE name LIKE "N%"'
         cur.execute(q)
 
         results = cur.fetchall()

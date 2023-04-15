@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+'''5-filter_cities module
+Lists all the cites of the state passed as argument
+'''
 if (__name__ == '__main__'):
     import MySQLdb
     from sys import argv

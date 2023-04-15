@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+4-cities_by_state module
+Lists all cities with their state ordered by city id
+'''
+
 
 if (__name__ == '__main__'):
     import MySQLdb
