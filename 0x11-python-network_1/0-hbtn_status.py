@@ -11,4 +11,4 @@ if (__name__ == '__main__'):
         body = res.read()
         print('Body response:')
         print('\t- type: {}\n\t- content: {}\n\t- utf8 content: {}'
-              .format(type(body), body, res.msg))
+              .format(type(body), body, body.decode('utf-8')))
