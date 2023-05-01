@@ -10,5 +10,5 @@ if (__name__ == '__main__'):
     with urllib.request.urlopen(url) as res:
         body = res.read()
         print('Body reponse:')
-        print('\t- type: {}\n\t- content: {}\n\t- utf8 content: {}'
+        print('    - type: {}\n    - content: {}\n    - utf8 content: {}'
               .format(type(body), body, res.msg))
