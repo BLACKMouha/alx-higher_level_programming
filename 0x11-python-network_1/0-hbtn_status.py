@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import urllib.request
 """
 Fetches an url and displays info about the body
 """
 
+import urllib.request
 
 if (__name__ == '__main__'):
     url = 'https://alx-intranet.hbtn.io/status'
