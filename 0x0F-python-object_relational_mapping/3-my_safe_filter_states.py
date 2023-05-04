@@ -13,9 +13,8 @@ if (__name__ == '__main__'):
         cur = db.cursor()
         searched_state = argv[4]
         cur.execute('SELECT * FROM states WHERE name=%s', (searched_state,))
-        r = cur.fetchall()
-        for i in r:
-            print(i)
+        r = cur.fetchone()
+        print(r)
 
         cur.close()
         db.close()
