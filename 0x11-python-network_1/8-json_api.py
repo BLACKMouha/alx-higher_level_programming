@@ -13,8 +13,7 @@ if __name__ == '__main__':
     r = requests.post(url, data={"q": q})
     try:
         rj = eval(r.text)
-        if (type(rj) is not dict):
-        elif (not rj):
+        if (not rj):
             print('No result')
         else:
             print('[{}] {}'.format(rj.get('id', None), rj.get('name', None)))
