@@ -15,8 +15,5 @@ if __name__ == '__main__':
     headers['X-GitHub-Api-Version'] = '2022-11-28'
     headers['Accept'] = 'application/vnd.github+json'
     r = post(url, headers=headers, auth=basic)
-    try:
-        j = r.json()
-        print(j.get('id', None))
-    except Exception as e:
-        print(e)
+    j = r.json()
+    print(j.get('id', None))
