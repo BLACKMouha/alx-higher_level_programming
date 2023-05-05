@@ -10,8 +10,8 @@ from sys import argv
 if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
     q = argv[1] if len(argv) == 2 else ""
-    r = requests.post(url, data={"q": q})
     try:
+        r = requests.post(url, data={"q": q})
         rj = r.json()
         if (not rj):
             print('No result')
