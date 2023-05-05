@@ -4,7 +4,7 @@ Takes GitHub credentials and displays the id
 '''
 
 if __name__ == '__main__':
-    from requests import post
+    from requests import get, post
     from requests.auth import HTTPBasicAuth
     from sys import argv
 
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     url = 'https://api.github.com/user'
     headers = {}
     headers['X-GitHub-Api-Version'] = '2022-11-28'
-    headers['Accept'] = 'application/vnd.github+json'
     r = post(url, headers=headers, auth=basic)
-    j = r.json()
+    j = eval(r.text.replace('false', 'False').replace('true', 'True')
+                   .replace('null', 'None'))
     print(j.get('id', None))
