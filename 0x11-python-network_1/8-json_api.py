@@ -12,6 +12,7 @@ if __name__ == '__main__':
     q = argv[1] if len(argv) == 2 else ""
     try:
         r = requests.post(url, data={"q": q})
+        r.raise_for_status()
         rj = r.json()
         if (not rj):
             print('No result')
