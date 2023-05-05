@@ -13,11 +13,11 @@ if __name__ == '__main__':
     r = requests.post(url, data={"q": q})
     try:
         rj = eval(r.text)
-    if (type(rj) is not dict):
-        print('Not a valid JSON')
-    elif (not rj):
-        print('No result')
-    else:
-        print('[{}] {}'.format(rj.get('id', None), rj.get('name', None)))
+        if (type(rj) is not dict):
+            print('Not a valid JSON')
+        elif (not rj):
+            print('No result')
+        else:
+            print('[{}] {}'.format(rj.get('id', None), rj.get('name', None)))
     except Exception as e:
         pass
