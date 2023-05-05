@@ -19,5 +19,5 @@ if __name__ == '__main__':
         print('No result')
     else:
         print('[{}] {}'.format(rj.get('id', None), rj.get('name', None)))
-    except Exception:
+    except Exception as e:
         pass
