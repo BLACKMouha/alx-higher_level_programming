@@ -4,7 +4,7 @@
  * the first argument is the file path
  * the second argument is the string to write
  * the content of the file must be written in utf-8
- * if an erro occured during while writing, print the error object
+ * if an error occured during while writing, print the error object
  */
 
 if (process.argv.length === 4) {
@@ -12,10 +12,6 @@ if (process.argv.length === 4) {
   const f = process.argv[2];
   const c = process.argv[3];
   fs.writeFile(f, c, 'utf-8', function (e) {
-    if (e) {
-      console.error(e);
-    } else {
-      console.log(c);
-    }
+    if (e) throw (e); else console.log(c);
   });
 }
