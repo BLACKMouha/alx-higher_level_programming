@@ -12,6 +12,6 @@ if (process.argv.length === 4) {
   const f = process.argv[2];
   const c = process.argv[3];
   fs.writeFile(f, c, 'utf-8', function (e) {
-    if (e) throw (e); else console.log(c);
+    if (e) throw (e);
   });
 }
