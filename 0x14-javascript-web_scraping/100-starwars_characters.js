@@ -17,7 +17,7 @@ if (process.argv.length === 3) {
       for (const p of JSON.parse(b).characters) {
         request.get(p, function (x, s, m) {
           if (x) {
-            throw (e);
+            throw (x);
           } else {
             console.log(JSON.parse(m).name);
           }

@@ -14,15 +14,16 @@ if (process.argv.length === 3) {
     if (e) {
       throw (e);
     } else {
-      for (const p of JSON.parse(b).characters) {
-        request.get(p, function (x, s, m) {
-          if (x) {
-            throw (e);
-          } else {
-            console.log(JSON.parse(m).name);
-          }
-        });
-      }
-    }
+		const g = JSON.parse(b).characters;
+		g.map(p => {
+			request.get(p, function (x, s, m) {
+				if (x) {
+					throw (x);
+				} else {
+					console.log(JSON.parse(m).name);
+				}
+			});
+		});
+	}
   });
 }
